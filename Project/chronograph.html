@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chronograph Master Collection | Wrist Aura</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Custom Styles -->
+    <style>
+        /* CSS Variables */
+        :root {
+            --dark-charcoal: #1E1E1E; /* A deep, rich dark color for background */
+            --luxury-gold: #D4AF37; /* Classic gold/brass color for accents */
+            --light-cream: #F5F5DC;
+            --mid-gray: #2A2A2A;
+        }
+
+        /* Global Styles */
+        body {
+            background-color: var(--dark-charcoal);
+            color: var(--light-cream);
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Typography Helpers */
+        .font-heading {
+            font-family: Georgia, serif;
+            letter-spacing: 1px;
+        }
+        
+        .font-body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Navbar Styling */
+        .bg-dark-charcoal {
+            background-color: var(--dark-charcoal) !important;
+        }
+
+        .navbar-brand {
+            color: var(--luxury-gold) !important;
+        }
+
+        .nav-link {
+            color: var(--light-cream) !important;
+            transition: color 0.2s ease-in-out;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--luxury-gold) !important;
+        }
+
+        /* Utility Icons (Cart, User) */
+        .utility-icon {
+            color: var(--light-cream);
+            transition: color 0.2s, transform 0.2s;
+        }
+
+        .utility-icon:hover {
+            color: var(--luxury-gold);
+            transform: scale(1.05);
+        }
+        
+        /* Hero Styling */
+        .hero-chronograph {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                              url('https://placehold.co/1920x600/111111/D4AF37?text=Precision+Chronograph+Movement');
+            background-size: cover;
+            background-position: center;
+            padding: 6rem 0;
+            border-bottom: 3px solid var(--luxury-gold);
+        }
+
+        /* Product Card Styling */
+        .product-card {
+            background-color: var(--mid-gray) !important;
+            border: none;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .product-card-img {
+            height: 300px;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover .product-card-img {
+            transform: scale(1.05);
+        }
+
+        .product-card .card-title {
+            color: var(--luxury-gold);
+            font-weight: bold;
+        }
+        
+        .product-button {
+            background-color: var(--luxury-gold);
+            color: var(--dark-charcoal);
+            font-weight: 700;
+            transition: background-color 0.2s;
+            border: none;
+        }
+
+        .product-button:hover {
+            background-color: #c09f30;
+            color: var(--dark-charcoal);
+        }
+
+        /* Footer links */
+        .footer-link {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-link:hover {
+            color: var(--luxury-gold);
+        }
+        
+    </style>
+</head>
+
+<body class="font-body">
+
+    <!-- Navbar: Sticky and dark-charcoal theme -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark-charcoal shadow-lg sticky-top" style="min-height: 80px;">
+        <div class="container-fluid mx-auto px-4 lg:px-8 max-w-7xl">
+
+            <!-- Logo / Brand Name (Home Link) -->
+            <a class="navbar-brand text-3xl font-heading" href="home.html" style="color: var(--luxury-gold);">
+                WRIST AURA
+            </a>
+
+            <!-- Mobile Menu Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav mx-auto me-lg-0 space-x-lg-4">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#top">Chronographs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html#featuredCollections">Collections</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Boutique</a>
+                    </li>
+                </ul>
+
+                <!-- Utility Icons -->
+                <div class="d-flex align-items-center mt-3 mt-lg-0 ms-lg-5">
+                    <button class="btn utility-icon me-2 border-0" type="button"><i class="bi bi-search"></i></button>
+                    <button class="btn utility-icon me-2 border-0 position-relative" type="button">
+                        <i class="bi bi-bag"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill" style="background-color: var(--luxury-gold); color: var(--dark-charcoal);">
+                            3
+                        </span>
+                    </button>
+                    <button class="btn utility-icon border-0" type="button"><i class="bi bi-person"></i></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section for Chronograph Master -->
+    <header class="hero-chronograph text-center text-white" id="top">
+        <div class="container">
+            <h1 class="display-3 font-heading mb-3" style="color: var(--luxury-gold); text-shadow: 0 0 10px rgba(0,0,0,0.8);">
+                CHRONOGRAPH MASTER
+            </h1>
+            <p class="lead fw-light mb-4" style="max-width: 700px; margin-left: auto; margin-right: auto;">
+                Uncompromising precision, engineered for the pursuit of excellence. Experience the art of measuring time with absolute accuracy.
+            </p>
+            <a href="#productGrid" class="btn rounded-pill px-5 py-3" 
+               style="background-color: var(--luxury-gold); color: var(--dark-charcoal); font-weight: bold; font-size: 1.1rem; transition: all 0.3s;">
+                VIEW TIMEPIECES
+            </a>
+        </div>
+    </header>
+
+    <!-- Product Grid Section -->
+    <div class="container py-5" id="productGrid">
+        <h2 class="text-center font-heading mb-5 border-bottom border-opacity-25 pb-3" style="color: var(--light-cream);">
+            The Pursuit of Precision
+        </h2>
+        
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
+            
+            <!-- Product Card 1: The Apex Racer -->
+            <div class="col">
+                <div class="card product-card h-100">
+                    <img src="https://placehold.co/600x400/D4AF37/1E1E1E?text=Apex+Racer+Chronograph" class="card-img-top product-card-img" alt="Apex Racer Chronograph">
+                    <div class="card-body">
+                        <h5 class="card-title font-heading">The Apex Racer</h5>
+                        <p class="card-text text-white-50 small">Caliber V32 | Automatic Flyback</p>
+                        <p class="card-text text-light">Built for the track. Features a 12-hour register and luminous sub-dials. Steel bracelet.</p>
+                        <h4 class="text-end my-3" style="color: var(--luxury-gold);">$5,400</h4>
+                        <button class="btn product-button w-100 rounded-pill">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 2: The Deep Chronos -->
+            <div class="col">
+                <div class="card product-card h-100">
+                    <img src="https://placehold.co/600x400/2A2A2A/D4AF37?text=Deep+Chronos+Diver" class="card-img-top product-card-img" alt="Deep Chronos Diver">
+                    <div class="card-body">
+                        <h5 class="card-title font-heading">The Deep Chronos</h5>
+                        <p class="card-text text-white-50 small">Caliber Aqua C-5 | 300m Water Resistance</p>
+                        <p class="card-text text-light">A chronograph designed for the depths, featuring a ceramic bezel and rugged rubber strap.</p>
+                        <h4 class="text-end my-3" style="color: var(--luxury-gold);">$6,850</h4>
+                        <button class="btn product-button w-100 rounded-pill">View Details</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product Card 3: The Classic Officer -->
+            <div class="col">
+                <div class="card product-card h-100">
+                    <img src="https://placehold.co/600x400/1E1E1E/D4AF37?text=Classic+Officer+Chronograph" class="card-img-top product-card-img" alt="Classic Officer Chronograph">
+                    <div class="card-body">
+                        <h5 class="card-title font-heading">The Classic Officer</h5>
+                        <p class="card-text text-white-50 small">Caliber Manual-C | Hand-wound Movement</p>
+                        <p class="card-text text-light">A vintage-inspired piece with a hand-wound movement and a supple leather strap.</p>
+                        <h4 class="text-end my-3" style="color: var(--luxury-gold);">$3,990</h4>
+                        <button class="btn product-button w-100 rounded-pill">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 4: The Sentinel GMT -->
+            <div class="col">
+                <div class="card product-card h-100">
+                    <img src="https://placehold.co/600x400/333333/D4AF37?text=Sentinel+GMT+Chronograph" class="card-img-top product-card-img" alt="Sentinel GMT Chronograph">
+                    <div class="card-body">
+                        <h5 class="card-title font-heading">The Sentinel GMT</h5>
+                        <p class="card-text text-white-50 small">Caliber Dual-Time | Chrono + GMT</p>
+                        <p class="card-text text-light">Track two time zones while measuring elapsed time—the perfect travel companion.</p>
+                        <h4 class="text-end my-3" style="color: var(--luxury-gold);">$7,150</h4>
+                        <button class="btn product-button w-100 rounded-pill">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- End Row -->
+    </div> <!-- End Container -->
+    
+    
+    <!-- Featurette / Call to Action -->
+    <div class="bg-dark-charcoal text-white py-5 mt-5">
+        <div class="container text-center py-5 rounded-3" style="border: 1px solid rgba(212, 175, 55, 0.2); background-color: #242424;">
+            <i class="bi bi-gear-wide-connected display-4 mb-3" style="color: var(--luxury-gold);"></i>
+            <h3 class="font-heading mb-3" style="color: var(--light-cream);">Discover the Movement</h3>
+            <p class="lead mb-4 fw-light">Every Chronograph Master timepiece houses a meticulously calibrated, in-house movement, visible through an exhibition caseback.</p>
+            <a href="#" class="btn btn-outline-light rounded-pill px-5 py-2" 
+               style="border-color: var(--luxury-gold); color: var(--luxury-gold); font-weight: bold;">
+                BOOK A VIRTUAL TOUR
+            </a>
+        </div>
+    </div>
+
+
+    <!-- Footer (Simplified) -->
+    <footer class="bg-dark-charcoal py-4 border-top border-secondary border-opacity-25">
+        <div class="container text-center">
+            <p class="mb-2 small" style="color: rgba(255, 255, 255, 0.6);">&copy; <span id="currentYear"></span> WRIST AURA. Precision. Power. Presence.</p>
+            <a href="home.html" class="footer-link small me-3">Back to Home</a>
+            <a href="#" class="footer-link small">Service Center</a>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JS Bundle (including Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script>
+        // Set the current year in the footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Placeholder images fallbacks
+        document.querySelectorAll('img').forEach(img => {
+            img.onerror = function() {
+                // Change the source to a generic, themed placeholder on error
+                this.src = `https://placehold.co/${this.width || 600}x${this.height || 400}/1E1E1E/D4AF37?text=Watch+Image`;
+            };
+        });
+    </script>
+</body>
+
+</html>
