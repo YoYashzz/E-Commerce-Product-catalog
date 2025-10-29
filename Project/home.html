@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wrist Aura | Luxury Timepieces</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Custom Styles (replacing home.css) -->
+     <link rel="stylesheet" href="home.css">
+    <style>
+        
+    </style>
+</head>
+
+<body class="font-body">
+
+    <!-- Navbar: Uses Bootstrap dark theme with custom charcoal background and is sticky to the top -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark-charcoal shadow-lg sticky-top" style="min-height: 80px;">
+        <div class="container-fluid mx-auto px-4 lg:px-8 max-w-7xl">
+
+            <!-- Logo / Brand Name -->
+            <a class="navbar-brand text-3xl font-heading" id="wristAura" href="#">
+                WRIST AURA
+            </a>
+
+            <!-- Mobile Menu Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Content (Links and Utility Icons) -->
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+                <!-- Main Navigation Links -->
+                <ul class="navbar-nav mx-auto me-lg-0 space-x-lg-4">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- LINK UPDATED to jump to Featured Collections section -->
+                        <a class="nav-link" href="#featuredCollections">Collections</a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- LINK UPDATED to jump to Footer section -->
+                        <a class="nav-link" href="#footerSection">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Boutique</a>
+                    </li>
+                </ul>
+
+                <!-- Utility Icons (Pushed to the far right on desktop) -->
+                <div class="d-flex align-items-center mt-3 mt-lg-0 ms-lg-5">
+
+                    <!-- Search Button - ID added for JS toggle -->
+                    <button class="btn utility-icon me-2 d-flex align-items-center justify-content-center border-0"
+                        type="button" id="searchToggleButton">
+                        <i class="bi bi-search" style="font-size: 1.15rem;"></i>
+                        <span class="d-lg-none ms-2">Search</span>
+                    </button>
+
+                    <!-- Cart Button with Badge -->
+                    <button
+                        class="btn utility-icon me-2 position-relative d-flex align-items-center justify-content-center border-0"
+                        type="button">
+                        <i class="bi bi-bag" style="font-size: 1.15rem;"></i>
+                        <span class="cart-badge">3</span>
+                        <span class="d-lg-none ms-2">Cart</span>
+                    </button>
+
+                    <!-- User Button - MODIFIED to open Offcanvas -->
+                    <button class="btn utility-icon d-flex align-items-center justify-content-center border-0"
+                        type="button" data-bs-toggle="offcanvas" data-bs-target="#profileOffcanvas"
+                        aria-controls="profileOffcanvas">
+                        <i class="bi bi-person" style="font-size: 1.15rem;"></i>
+                        <span class="d-lg-none ms-2">Account</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- New Search Bar Container -->
+    <div id="searchBarContainer" class="bg-dark-charcoal">
+        <div class="container">
+            <div class="input-group">
+                <input type="text" class="form-control rounded-start" placeholder="Search for models, movements, or features..." aria-label="Search field">
+                <button class="btn" type="button" style="background-color: var(--luxury-gold); color: var(--dark-charcoal);">
+                    <i class="bi bi-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Hero Carousel Section -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <!-- Carousel Item 1 -->
+            <div class="carousel-item active" style="max-height: 70vh; overflow: hidden;">
+                <img src="Photos/lega.jpg" class="d-block w-100 poster"
+                    alt="The Legacy Collection">
+                <div class="carousel-caption d-none d-md-block text-start">
+                    <h5 class="font-heading fs-2" style="color: var(--luxury-gold);">The Legacy Collection</h5>
+                    <p class="font-body fw-light">Discover timepieces built to last a lifetime.</p>
+                </div>
+            </div>
+            <!-- Carousel Item 2 -->
+            <div class="carousel-item" style="max-height: 70vh; overflow: hidden;">
+                <img src="Photos/minimalistnew.jpg" class="d-block w-100 poster poster2"
+                    alt="Minimalist Elegance">
+                <div class="carousel-caption d-none d-md-block text-start">
+                    <h5 class="font-heading fs-2" style="color: var(--luxury-gold);">Minimalist Elegance</h5>
+                    <p class="font-body fw-light">Sleek lines and subtle detailing for a refined look.</p>
+                </div>
+            </div>
+            <!-- Carousel Item 3 -->
+            <div class="carousel-item" style="max-height: 70vh; overflow: hidden;">
+                <img src="Photos/chronos.jpg" class="d-block w-100 poster"
+                    alt="New Arrivals: The Chronos">
+                <div class="carousel-caption d-none d-md-block text-start">
+                    <h5 class="font-heading fs-2" style="color: var(--luxury-gold);">New Arrivals: The Chronos</h5>
+                    <p class="font-body fw-light">Experience the future of mechanical precision.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Featured Collections Section - ID ADDED for navigation -->
+    <div class="container py-5" id="featuredCollections">
+        <h2 class="text-center font-heading mb-5" style="color: var(--luxury-gold);">Featured Collections</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+            <!-- Card 1: Chronograph Master -->
+            <div class="col">
+                <div class="card h-100 bg-dark-charcoal border-0 rounded-3 shadow-lg">
+                    <img src="Photos/chronograph.jpg" class="card-img-top rounded-top-3" alt="Chronograph Master">
+                    <div class="card-body text-light">
+                        <h5 class="card-title font-heading" style="color: var(--luxury-gold);">Chronograph Master</h5>
+                        <p class="card-text">Precision engineering meets timeless elegance in this sophisticated
+                            timepiece.</p>
+                        <p class="text-muted">Starting from $1,999</p>
+                        <!-- LINK UPDATED -->
+                        <a href="chronograph.html" class="btn btn-outline-light w-100 rounded-pill mt-2"
+                            style="border-color: var(--luxury-gold); color: var(--luxury-gold);" target="_blank">Explore
+                            Collection</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Royal Classic -->
+            <div class="col">
+                <div class="card h-100 bg-dark-charcoal border-0 rounded-3 shadow-lg">
+                    <img src="Photos/royal.jpg" class="card-img-top rounded-top-3" alt="Royal Classic">
+                    <div class="card-body text-light">
+                        <h5 class="card-title font-heading" style="color: var(--luxury-gold);">Royal Classic</h5>
+                        <p class="card-text">Traditional craftsmanship with modern sophistication for the distinguished
+                            collector.</p>
+                        <p class="text-muted">Starting from $2,499</p>
+                        <!-- LINK UPDATED -->
+                        <a href="royal-classic.html" class="btn btn-outline-light w-100 rounded-pill mt-2"
+                            style="border-color: var(--luxury-gold); color: var(--luxury-gold);" target="_blank">Explore
+                            Collection</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Minimal Elegance -->
+            <div class="col">
+                <div class="card h-100 bg-dark-charcoal border-0 rounded-3 shadow-lg">
+                    <img src="Photos/Minimalist.jpg" class="card-img-top rounded-top-3" alt="Minimal Elegance">
+                    <div class="card-body text-light">
+                        <h5 class="card-title font-heading" style="color: var(--luxury-gold);">Minimal Elegance</h5>
+                        <p class="card-text">Sleek lines and subtle detailing for a refined everyday statement.</p>
+                        <p class="text-muted">Starting from $899</p>
+                        <!-- LINK UPDATED -->
+                        <a href="minimal-elegance.html" class="btn btn-outline-light w-100 rounded-pill mt-2"
+                            style="border-color: var(--luxury-gold); color: var(--luxury-gold);" target="_blank">Explore
+                            Collection</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4: Avant-Garde -->
+            <div class="col">
+                <div class="card h-100 bg-dark-charcoal border-0 rounded-3 shadow-lg">
+                    <img src="Photos/Avant.jpg" class="card-img-top rounded-top-3" alt="Avant-Garde">
+                    <div class="card-body text-light">
+                        <h5 class="card-title font-heading" style="color: var(--luxury-gold);">Avant-Garde</h5>
+                        <p class="card-text">Bold materials and contemporary design for collectors who seek distinction.
+                        </p>
+                        <p class="text-muted">Starting from $3,199</p>
+                        <!-- LINK UPDATED -->
+                        <a href="avant-garde.html" class="btn btn-outline-light w-100 rounded-pill mt-2 Avant"
+                            style="border-color: var(--luxury-gold); color: var(--luxury-gold);" target="_blank">Explore
+                            Collection</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section - ID ADDED for navigation -->
+    <footer class="bg-dark-charcoal py-5 mt-5 border-top border-secondary border-opacity-25" id="footerSection">
+        <div class="container">
+            <div class="row g-4">
+
+                <!-- Column 1: Brand Info and Motto -->
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="font-heading mb-3" id="footerAura" style="color: var(--luxury-gold); font-size: 1.8rem;">
+                        WRIST AURA
+                    </h5>
+                    <p class="footer-text mb-3">Time is not measured by the clock, but by the memories it holds.</p>
+                    <p class="footer-text mb-1">
+                        <i class="bi bi-geo-alt-fill me-2" style="color: var(--luxury-gold);"></i>
+                        101 Global Watch Ave, Geneva, Switzerland
+                    </p>
+                    <p class="footer-text">
+                        <i class="bi bi-envelope-fill me-2" style="color: var(--luxury-gold);"></i>
+                        contact@wristaura.com
+                    </p>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="footer-heading">Collections</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="chronograph.html" class="footer-link">Chronographs</a></li>
+                        <li class="mb-2"><a href="royal-classic.html" class="footer-link">Dress Watches</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">Diver Watches</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">Limited Editions</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Customer Service -->
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="footer-heading">Service</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="footer-link">Warranty</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">Shipping & Returns</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">FAQ</a></li>
+                        <li class="mb-2"><a href="#" class="footer-link">Book an Appointment</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Newsletter & Social -->
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="footer-heading">Stay Informed</h6>
+                    <p class="footer-text">Subscribe to our newsletter for exclusive insights and new releases.</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control newsletter-input rounded-start-pill" placeholder="Enter your email" aria-label="Email for newsletter">
+                        <button class="btn newsletter-button rounded-end-pill" type="button">Subscribe</button>
+                    </div>
+
+                    <div class="mt-4">
+                        <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright Bar -->
+            <div class="row mt-5 pt-3 border-top border-secondary border-opacity-25">
+                <div class="col-md-6">
+                    <p class="footer-text mb-0">&copy; <span id="currentYear"></span> WRIST AURA. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="footer-link me-3">Privacy Policy</a>
+                    <a href="#" class="footer-link">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Profile Offcanvas Section -->
+    <div class="offcanvas offcanvas-end bg-dark-charcoal text-white" tabindex="-1" id="profileOffcanvas"
+        aria-labelledby="profileOffcanvasLabel" style="max-width: 380px;">
+        <div class="offcanvas-header border-bottom border-secondary border-opacity-25">
+            <h5 class="offcanvas-title font-heading" id="profileOffcanvasLabel" style="color: var(--luxury-gold);">MY ACCOUNT</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+            <!-- User Info Card -->
+            <div class="mb-4 p-3 rounded-3"
+                style="background-color: rgba(212, 175, 55, 0.05); border: 1px solid var(--luxury-gold);">
+                <h6 class="font-body fw-bold" style="color: var(--luxury-gold);">Welcome Back, John!</h6>
+                <p class="mb-0 text-white-50 small">john.doe@example.com</p>
+            </div>
+
+            <!-- Profile Links -->
+            <div class="list-group list-group-flush flex-grow-1">
+                <a href="#"
+                    class="list-group-item list-group-item-action bg-transparent text-white border-bottom border-secondary border-opacity-25 py-3">
+                    <i class="bi bi-person-circle me-3" style="color: var(--luxury-gold);"></i> Account Dashboard
+                </a>
+                <a href="#"
+                    class="list-group-item list-group-item-action bg-transparent text-white border-bottom border-secondary border-opacity-25 py-3">
+                    <i class="bi bi-box-seam me-3" style="color: var(--luxury-gold);"></i> Order History
+                </a>
+                <a href="#"
+                    class="list-group-item list-group-item-action bg-transparent text-white border-bottom border-secondary border-opacity-25 py-3">
+                    <i class="bi bi-geo-alt me-3" style="color: var(--luxury-gold);"></i> Shipping Addresses
+                </a>
+                <a href="#"
+                    class="list-group-item list-group-item-action bg-transparent text-white border-bottom border-secondary border-opacity-25 py-3">
+                    <i class="bi bi-credit-card me-3" style="color: var(--luxury-gold);"></i> Payment Methods
+                </a>
+                <a href="#" class="list-group-item list-group-item-action bg-transparent text-white py-3">
+                    <i class="bi bi-gear me-3" style="color: var(--luxury-gold);"></i> Settings & Preferences
+                </a>
+            </div>
+
+            <!-- Logout Button at the bottom -->
+            <div class="mt-auto pt-3">
+                <button class="btn w-100 rounded-pill py-2" type="button"
+                    style="background-color: var(--luxury-gold); color: var(--dark-charcoal); font-weight: 700; transition: all 0.2s;">
+                    <i class="bi bi-box-arrow-right me-2"></i> Log Out
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap JS Bundle (including Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script>
+        // Define the CSS variables in JS for easy use if needed, but primarily used in CSS:
+        // const luxuryGold = '#D4AF37';
+        // const darkCharcoal = '#1E1E1E';
+        
+        // Set the current year in the footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Carousel Initialization
+        const myCarouselElement = document.querySelector('#carouselExampleCaptions');
+        const carouselInstance = new bootstrap.Carousel(myCarouselElement, {
+            interval: 5000, 
+            pause: 'hover' 
+        });
+
+        // --- New Search Bar Toggle Logic ---
+        const searchToggleButton = document.getElementById('searchToggleButton');
+        const searchBarContainer = document.getElementById('searchBarContainer');
+
+        searchToggleButton.addEventListener('click', () => {
+            // Toggle the 'active' class to control max-height and opacity (CSS handles the animation)
+            searchBarContainer.classList.toggle('active');
+            
+            // Focus on the input field when it opens
+            if (searchBarContainer.classList.contains('active')) {
+                const searchInput = searchBarContainer.querySelector('input[type="text"]');
+                if (searchInput) {
+                    // Slight delay to ensure element is visible before focusing
+                    setTimeout(() => searchInput.focus(), 100); 
+                }
+            }
+        });
+        
+        // Close search bar if clicking outside (optional enhancement)
+        document.addEventListener('click', (event) => {
+            const isClickInsideNavbar = event.target.closest('.navbar') !== null;
+            const isClickInsideSearchBar = event.target.closest('#searchBarContainer') !== null;
+            
+            // If the search bar is open and the click is outside the navbar and search bar, close it
+            if (searchBarContainer.classList.contains('active') && !isClickInsideNavbar && !isClickInsideSearchBar) {
+                 searchBarContainer.classList.remove('active');
+            }
+        });
+        
+        // Placeholder images fallbacks
+        document.querySelectorAll('img').forEach(img => {
+            img.onerror = function() {
+                // Change the source to a generic, themed placeholder on error
+                this.src = `https://placehold.co/${this.width || 600}x${this.height || 400}/1E1E1E/D4AF37?text=Watch+Image`;
+            };
+        });
+    </script>
+</body>
+
+</html>

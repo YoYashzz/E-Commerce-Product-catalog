@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal Elegance Collection | Wrist Aura</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Custom Styles -->
+    <style>
+        /* CSS Variables */
+        :root {
+            --dark-charcoal: #1E1E1E; /* A deep, rich dark color for background */
+            --luxury-gold: #D4AF37; /* Classic gold/brass color for accents */
+            --light-cream: #F5F5DC;
+            --mid-gray: #2A2A2A;
+        }
+
+        /* Global Styles */
+        body {
+            background-color: var(--dark-charcoal);
+            color: var(--light-cream);
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Typography Helpers */
+        .font-heading {
+            font-family: 'Inter', sans-serif; /* Clean Sans-serif for modern minimalism */
+            letter-spacing: 2px;
+            font-weight: 200;
+        }
+        
+        .font-body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Navbar Styling */
+        .bg-dark-charcoal {
+            background-color: var(--dark-charcoal) !important;
+        }
+
+        .navbar-brand {
+            color: var(--luxury-gold) !important;
+        }
+
+        .nav-link {
+            color: var(--light-cream) !important;
+            transition: color 0.2s ease-in-out;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--luxury-gold) !important;
+        }
+
+        /* Utility Icons (Cart, User) */
+        .utility-icon {
+            color: var(--light-cream);
+            transition: color 0.2s, transform 0.2s;
+        }
+
+        .utility-icon:hover {
+            color: var(--luxury-gold);
+            transform: scale(1.05);
+        }
+        
+        /* Hero Styling */
+        .hero-minimal {
+            /* Minimalist texture/gradient */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                              url("Photos/elegant\ background.png");
+            background-size: cover;
+            background-position: center;
+            padding: 8rem 0; /* Extra height for spacious feel */
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3); 
+        }
+
+        /* Product Card Styling */
+        .product-card {
+            background-color: var(--mid-gray) !important;
+            border: none;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .product-card-img {
+            height: 300px;
+            object-fit: cover;
+            /* No hover scale for a cleaner look */
+        }
+
+        .product-card .card-title {
+            color: var(--luxury-gold);
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+        
+        .product-button {
+            background-color: var(--luxury-gold);
+            color: var(--dark-charcoal);
+            font-weight: 700;
+            transition: background-color 0.2s;
+            border: none;
+        }
+
+        .product-button:hover {
+            background-color: #c09f30;
+            color: var(--dark-charcoal);
+        }
+        
+        /* Featurette Styling */
+        .feature-icon {
+            color: var(--luxury-gold);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Footer links */
+        .footer-link {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-link:hover {
+            color: var(--luxury-gold);
+        }
+        
+    </style>
+</head>
+
+<body class="font-body">
+
+    <!-- Navbar: Sticky and dark-charcoal theme -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark-charcoal shadow-lg sticky-top" style="min-height: 80px;">
+        <div class="container-fluid mx-auto px-4 lg:px-8 max-w-7xl">
+
+            <!-- Logo / Brand Name (Home Link) -->
+            <a class="navbar-brand text-3xl font-heading" href="home.html" style="color: var(--luxury-gold); font-weight: 600;">
+                WRIST AURA
+            </a>
+
+            <!-- Mobile Menu Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav mx-auto me-lg-0 space-x-lg-4">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#top">Minimal Elegance</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html#featuredCollections">Collections</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Boutique</a>
+                    </li>
+                </ul>
+
+                <!-- Utility Icons -->
+                <div class="d-flex align-items-center mt-3 mt-lg-0 ms-lg-5">
+                    <button class="btn utility-icon me-2 border-0" type="button"><i class="bi bi-search"></i></button>
+                    <button class="btn utility-icon me-2 border-0 position-relative" type="button">
+                        <i class="bi bi-bag"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill" style="background-color: var(--luxury-gold); color: var(--dark-charcoal);">
+                            3
+                        </span>
+                    </button>
+                    <button class="btn utility-icon border-0" type="button"><i class="bi bi-person"></i></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section for Minimal Elegance Collection -->
+    <header class="hero-minimal text-center text-white" id="top">
+        <div class="container">
+            <h1 class="display-3 font-heading mb-3" style="color: var(--luxury-gold); text-shadow: 0 0 10px rgba(0,0,0,0.8);">
+                MINIMAL ELEGANCE
+            </h1>
+            <p class="lead fw-light mb-4" style="max-width: 650px; margin-left: auto; margin-right: auto; font-size: 1.15rem;">
+                The essence of time, distilled. Our minimalist line removes the superfluous, focusing entirely on clean design, perfect proportions, and refined materials.
+            </p>
+            <a href="#productGrid" class="btn rounded-pill px-5 py-3" 
+               style="background-color: var(--luxury-gold); color: var(--dark-charcoal); font-weight: bold; font-size: 1.0rem; letter-spacing: 1px; transition: all 0.3s;">
+                DISCOVER SIMPLICITY
+            </a>
+        </div>
+    </header>
+
+    <!-- Product Grid Section -->
+    <div class="container py-5" id="productGrid">
+        <h2 class="text-center font-heading mb-5 border-bottom border-opacity-25 pb-3" style="color: var(--light-cream); font-weight: 300;">
+            Focus on the Essential
+        </h2>
+        
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
+            
+            <!-- Product Card 1: The Purity 38 -->
+            <div class="col">
+                <div class="card product-card h-100">
+                    <img src="Photos/pure white.png" class="card-img-top product-card-img" alt="The Purity 38">
+                    <div class="card-body">
+                        <h5 class="card-title font-heading">The Purity 38</h5>
+                        <p class="card-text text-white-50 small">Quartz Movement | Stainless Steel</p>
+                        <p class="card-text text-light">A clean white dial, pencil hands, and a thin case profile define this everyday essential.</p>
+                        <h4 class="text-end my-3" style="color: var(--luxury-gold);">$950</h4>
+                        <button class="btn product-button w-100 rounded-pill">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 2: The Horizon Black -->
+            <div class="col">
+                <div class="card product-card h-100">
+                    <img src="Photos/horizontal black.png" class="card-img-top product-card-img" alt="The Horizon Black">
+                    <div class="card-body">
+                        <h5 class="card-title font-heading">The Horizon Black</h5>
+                        <p class="card-text text-white-50 small">Automatic Caliber M21 | Mesh Bracelet</p>
+                        <p class="card-text text-light">Deep black matte dial with no numerals, paired with a sleek Milanese mesh strap.</p>
+                        <h4 class="text-end my-3" style="color: var(--luxury-gold);">$1,450</h4>
+                        <button class="btn product-button w-100 rounded-pill">View Details</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product Card 3: The Golden Ratio -->
+            <div class="col">
+                <div class="card product-card h-100">
+                    <img src="Photos/golden ratio slim.png" class="card-img-top product-card-img" alt="The Golden Ratio">
+                    <div class="card-body">
+                        <h5 class="card-title font-heading">The Golden Ratio</h5>
+                        <p class="card-text text-white-50 small">Ultra-Thin Hand-Wound | 34mm Diameter</p>
+                        <p class="card-text text-light">The pinnacle of subtle luxury. Its perfectly circular case and subtle gold markers follow the Golden Ratio principle.</p>
+                        <h4 class="text-end my-3" style="color: var(--luxury-gold);">$2,100</h4>
+                        <button class="btn product-button w-100 rounded-pill">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 4: The Midnight Date -->
+            <div class="col">
+                <div class="card product-card h-100">
+                    <img src="Photos/midnight date.png" class="card-img-top product-card-img" alt="The Midnight Date">
+                    <div class="card-body">
+                        <h5 class="card-title font-heading">The Midnight Date</h5>
+                        <p class="card-text text-white-50 small">Automatic Caliber 15 | Single Date Window</p>
+                        <p class="card-text text-light">A sophisticated dark grey dial with a discrete date window at the 6 o'clock position for essential functionality.</p>
+                        <h4 class="text-end my-3" style="color: var(--luxury-gold);">$1,680</h4>
+                        <button class="btn product-button w-100 rounded-pill">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- End Row -->
+    </div> <!-- End Container -->
+    
+    
+    <!-- Featurette / Design Statement -->
+    <div class="bg-dark-charcoal text-white py-5 mt-5">
+        <div class="container text-center py-5 rounded-3" style="border: 1px solid rgba(212, 175, 55, 0.2); background-color: #242424;">
+            <i class="bi bi-rulers feature-icon"></i>
+            <h3 class="font-heading mb-3" style="color: var(--light-cream); font-weight: 300;">Designed by Principle</h3>
+            <p class="lead mb-4 fw-light">We believe that simplicity is the ultimate sophistication. Our minimalist watches are a testament to pure, functional design.</p>
+            <a href="#" class="btn btn-outline-light rounded-pill px-5 py-2" 
+               style="border-color: var(--luxury-gold); color: var(--luxury-gold); font-weight: bold;">
+                READ THE DESIGN MANIFESTO
+            </a>
+        </div>
+    </div>
+
+
+    <!-- Footer (Simplified) -->
+    <footer class="bg-dark-charcoal py-4 border-top border-secondary border-opacity-25">
+        <div class="container text-center">
+            <p class="mb-2 small" style="color: rgba(255, 255, 255, 0.6);">&copy; <span id="currentYear"></span> WRIST AURA. Less is more.</p>
+            <a href="home.html" class="footer-link small me-3">Back to Home</a>
+            <a href="#" class="footer-link small">Contact Us</a>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JS Bundle (including Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script>
+        // Set the current year in the footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Placeholder images fallbacks
+        document.querySelectorAll('img').forEach(img => {
+            img.onerror = function() {
+                // Change the source to a generic, themed placeholder on error
+                this.src = `https://placehold.co/${this.width || 600}x${this.height || 400}/1E1E1E/D4AF37?text=Watch+Image`;
+            };
+        });
+    </script>
+</body>
+
+</html>
